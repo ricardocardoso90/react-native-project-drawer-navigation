@@ -1,6 +1,6 @@
 import { Drawer } from 'expo-router/drawer';
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { Feather } from '@expo/vector-icons';
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 
 export default function Layout() {
   return (
@@ -8,6 +8,23 @@ export default function Layout() {
       <Drawer
         screenOptions={{
           headerShown: false,
+          drawerActiveBackgroundColor: 'transparent',
+          drawerInactiveBackgroundColor: 'transparent',
+          drawerInactiveTintColor: '#727D9B',
+          drawerActiveTintColor: '#FFF',
+          // drawerHideStatusBarOnOpen: true,
+          overlayColor: 'transparent',
+          drawerStyle: {
+            backgroundColor: '#1D1F25',
+            // paddingTop: 32,
+            width: '50%',
+          },
+          drawerLabelStyle: {
+            marginLeft: -24,
+          },
+          sceneContainerStyle: {
+            backgroundColor: '#1D1F25',
+          }
         }}
       >
         <Drawer.Screen name='index'

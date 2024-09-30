@@ -1,24 +1,28 @@
-import { DrawerToggleButton } from "@react-navigation/drawer";
 import { StyleSheet, Text, View } from "react-native";
+import { DrawerToggleButton } from "@react-navigation/drawer";
+import { DrawerSceneWrapper } from "../components/drawer-scene-wrapper";
 
 export default function Notification() {
   return (
-    <View style={styles.container}>
-      <View style={styles.header}>
+    <DrawerSceneWrapper>
+      <View style={styles.container}>
+        <View style={styles.header}>
 
-        <Text style={styles.username}>Notification</Text>
+          <Text style={styles.username}>Notification</Text>
 
-        <DrawerToggleButton />
+          <DrawerToggleButton />
+        </View>
       </View>
-    </View>
+    </DrawerSceneWrapper>
   )
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 15,
-    paddingTop: 45,
+    padding: 25,
+    paddingTop: 65,
+    backgroundColor: '#FFF'
   },
   header: {
     width: '100%',
